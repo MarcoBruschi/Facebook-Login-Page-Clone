@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+.root {
+    display: grid;
+}
 
 * {
     margin: 0px;
@@ -14,10 +17,11 @@
 body {
     background-color: #f7f7f7;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    flex-direction: column;
 }
 
 main {
@@ -26,7 +30,13 @@ main {
     align-items: center;
 }
 
-.facebook-text {
+.facebook-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.facebook-login-text {
     display: flex;
     justify-content: flex-start;
     align-items: start;
@@ -35,26 +45,100 @@ main {
     text-align: start;
     line-height: 28px;
     font-size: 24px;
+    margin-bottom: 100px;
+    margin-right: 100px;
 }
 
-.facebook-text img {
+.facebook-login-text img {
     margin: -28px;
+    margin-bottom: 2px;
 }
 
-.facebook-login {
+.facebook-login-form {
     background-color: #ffffff;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 10px;
     width: 400px;
     height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgb(218, 218, 218);
 }
 
-.facebook-login input {
-    padding: 10px 100px ;
+.facebook-login-form input {
+    width: 96%;
+    height: 14%;
+    padding-left: 10px;
     border: 1px;
-    border-style: solid ;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gainsboro;
     margin: 10px;
+    outline: none;
+    text-align: start;
+    font-size: 16px;
+    font-weight: 400;
 }
+
+.facebook-login-form a {
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0866ff;
+}
+
+.facebook-login-form-enter-button {
+    width: 96%;
+    height: 13%;
+    background-color: #0866ff;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: opacity 0.4s ;
+}
+
+.facebook-login-form hr {
+    width: 96%;
+    height: 10px;
+    border-top: 1px solid;
+    color: rgb(226, 226, 226)
+}
+
+.facebook-login-form-create-button {
+    width: 50%;
+    height: 13%;
+    background-color: #42b72a;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.4s ;
+}
+
+.create-page-text {
+    width: 400px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.facebook-login-form-enter-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.facebook-login-form a:hover {
+    text-decoration: underline;
+}
+
+.facebook-login-form-create-button:hover {
+    background-color: #3aa325;
+    cursor: pointer;
+}
+
